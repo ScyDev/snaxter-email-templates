@@ -34,5 +34,8 @@ Package.onUse(function (api) {
   api.addAssets("templates/accounts/sendWelcomeEmail.html", "server");
   api.addAssets("templates/accounts/inviteShopMember.html", "server");
 
+  // Products Email Templates
+  api.addAssets("templates/products/reviewProduct.html", "server");  
+
   api.export("ReactionEmailTemplate");
 });
