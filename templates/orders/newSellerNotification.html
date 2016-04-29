@@ -823,13 +823,7 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <p class="lead">Vielen Dank für Deine neue <strong>{{shop.name}}</strong>-Bestellung.</p>
-                            <p>
-                              {{buyerAddress.fullName}}<br />
-                              {{buyerAddress.address1}} {{buyerAddress.address2}}<br />
-                              {{buyerAddress.postal}} {{buyerAddress.city}}<br />
-                              Tel: {{buyerAddress.phone}}<br />
-                            </p>
+                            <p class="lead">Soeben ist eine neue <strong>{{shop.name}}</strong>-Bestellung für Dich eingegangen.</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -846,17 +840,21 @@ body.outlook p {
                         <tr>
                           <td class="panel">
                             <p class="lead">
-                              Deine Bestellnummer lautet: {{transactionId}}
+                              Die Bestellnummer lautet: {{transactionId}}<br />
+                              <br />
+                              Bestellung von:<br />
+                              {{buyerAddress.fullName}} (<a href="{{homepage}}snaxter/profile/{{order.userId}}">{{shop.name}}-Profil</a>)<br />
+                              {{buyerAddress.address1}} {{buyerAddress.address2}}<br />
+                              {{buyerAddress.postal}} {{buyerAddress.city}}<br />
+                              Tel: {{buyerAddress.phone}}
                             </p>
                             <p class="lead">
-                              Du hast folgende Mahlzeiten bestellt:
+                              Folgende Deiner Mahlzeiten wurden vom Kunden bestellt:
                             </p>
                             {{#each items}}
                             <p>
                               <b>1x {{product.title}}</b><br />
-                              {{address.fullName}} (<a href="{{../homepage}}snaxter/profile/{{product.userId}}">{{../shop.name}}-Profil</a>)<br />
-                              {{address.address1}} {{address.address2}}<br />
-                              {{address.postal}} {{address.city}}<br />
+                              {{address.fullName}}, {{address.address1}} {{address.address2}}, {{address.postal}} {{address.city}}<br />
                               Tel: {{address.phone}}<br />
                               Verkaufsdatum: {{forSaleOnDate}}<br />
                               Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}}

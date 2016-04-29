@@ -25,6 +25,7 @@ Package.onUse(function (api) {
   api.addAssets("templates/coreDefault.html", "server");
 
   api.addAssets("templates/orders/new.html", "server");
+  api.addAssets("templates/orders/newSellerNotification.html", "server");
   api.addAssets("templates/orders/coreOrderCompleted.html", "server");
   api.addAssets("templates/orders/coreOrderShippingInvoice.html", "server");
   api.addAssets("templates/orders/coreOrderShippingSummary.html", "server");
@@ -35,7 +36,7 @@ Package.onUse(function (api) {
   api.addAssets("templates/accounts/inviteShopMember.html", "server");
 
   // Products Email Templates
-  api.addAssets("templates/products/reviewProduct.html", "server");  
+  api.addAssets("templates/products/reviewProduct.html", "server");
 
   api.export("ReactionEmailTemplate");
 });
