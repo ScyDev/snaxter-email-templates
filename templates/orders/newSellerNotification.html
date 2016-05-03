@@ -776,6 +776,7 @@ body.outlook p {
       <td class="center" align="center" valign="top">
         <center>
 
+<!--
           <table class="row header">
             <tr>
               <td class="center" align="center">
@@ -801,6 +802,7 @@ body.outlook p {
               </td>
             </tr>
           </table>
+-->
           <br>
 
           <table class="container">
@@ -814,7 +816,7 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hallo {{userName}}</h1>
+                            <h1>Hallo {{address.fullName}}}</h1>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -849,17 +851,23 @@ body.outlook p {
                               Tel: {{buyerAddress.phone}}
                             </p>
                             <p class="lead">
-                              Folgende Deiner Mahlzeiten wurden vom Kunden bestellt:
+                              Folgende Deiner Mahlzeiten wurden von {{buyerAddress.fullName}} bestellt:
                             </p>
                             {{#each items}}
                             <p>
                               <b>1x {{product.title}}</b><br />
-                              {{address.fullName}}, {{address.address1}} {{address.address2}}, {{address.postal}} {{address.city}}<br />
+<!--                              {{address.fullName}}, {{address.address1}} {{address.address2}}, {{address.postal}} {{address.city}}<br />
                               Tel: {{address.phone}}<br />
+-->
                               Verkaufsdatum: {{forSaleOnDate}}<br />
-                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}}
+                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}} <br />
+                              *****<br />
                             </p>
                             {{/each}}
+                            <p>
+                              Viel Spass beim Kochen!<br />
+                              Dein snaxter-team<br />
+                            </p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -867,6 +875,7 @@ body.outlook p {
                     </td>
                   </tr>
                 </table>
+<!--
                 <table class="row footer">
                   <tr>
                     <td class="wrapper">
@@ -882,6 +891,7 @@ body.outlook p {
                             </table>
                           </td>
                           <td class="expander"></td>
+
                         </tr>
                       </table>
 
@@ -889,6 +899,7 @@ body.outlook p {
                   </tr>
                 </table>
                 <p><hr></p>
+
                 <table class="row">
                   <tr>
                     <td class="wrapper last">
@@ -907,6 +918,7 @@ body.outlook p {
                     </td>
                   </tr>
                 </table>
+-->
                 <!-- container end below -->
               </td>
             </tr>

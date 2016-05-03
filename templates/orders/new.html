@@ -775,7 +775,7 @@ body.outlook p {
     <tr>
       <td class="center" align="center" valign="top">
         <center>
-
+<!--
           <table class="row header">
             <tr>
               <td class="center" align="center">
@@ -802,7 +802,7 @@ body.outlook p {
             </tr>
           </table>
           <br>
-
+-->
           <table class="container">
             <tr>
               <td>
@@ -814,7 +814,7 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hallo {{userName}}</h1>
+                            <h1>Hallo {{buyerAddress.fullName}}</h1>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -828,7 +828,7 @@ body.outlook p {
                               {{buyerAddress.fullName}}<br />
                               {{buyerAddress.address1}} {{buyerAddress.address2}}<br />
                               {{buyerAddress.postal}} {{buyerAddress.city}}<br />
-                              Tel: {{buyerAddress.phone}}<br />
+                              <!--Tel: {{buyerAddress.phone}}<br /> -->
                             </p>
                           </td>
                           <td class="expander"></td>
@@ -854,21 +854,29 @@ body.outlook p {
                             {{#each items}}
                             <p>
                               <b>1x {{product.title}}</b><br />
+                              Verkaufsdatum: {{forSaleOnDate}}<br />
+                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}}<br /><br />
                               {{address.fullName}} (<a href="{{../homepage}}snaxter/profile/{{product.userId}}">{{../shop.name}}-Profil</a>)<br />
                               {{address.address1}} {{address.address2}}<br />
                               {{address.postal}} {{address.city}}<br />
-                              Tel: {{address.phone}}<br />
-                              Verkaufsdatum: {{forSaleOnDate}}<br />
-                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}}
+                              Tel: {{address.phone}}<br /> <br />
+                              *****<br /> <br />
+
                             </p>
                             {{/each}}
+                            <p>
+                            En Guete!<br />
+                            Dein snaxter-team<br />
+                            </p>
                           </td>
-                          <td class="expander"></td>
+                         <td class="expander"></td>
+
                         </tr>
                       </table>
                     </td>
                   </tr>
                 </table>
+<!--
                 <table class="row footer">
                   <tr>
                     <td class="wrapper">
@@ -883,7 +891,7 @@ body.outlook p {
                               </tr>
                             </table>
                           </td>
-                          <td class="expander"></td>
+                            <td class="expander"></td>
                         </tr>
                       </table>
 
@@ -899,7 +907,7 @@ body.outlook p {
                         <tr>
                           <td align="center">
                             <center>
-                              <p style="text-align:center;">Sent by <a href="{{homepage}}">{{shop.name}}</a></p>
+                              <p style="text-align:center;">Dein <a href="{{homepage}}">{{shop.name}}</a></p>
                             </center>
                           </td>
                           <td class="expander"></td>
@@ -909,6 +917,7 @@ body.outlook p {
                     </td>
                   </tr>
                 </table>
+-->
                 <!-- container end below -->
               </td>
             </tr>
