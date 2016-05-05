@@ -824,12 +824,16 @@ body.outlook p {
                         <tr>
                           <td>
                             <p class="lead">Vielen Dank für Deine neue <strong>{{shop.name}}</strong>-Bestellung.</p>
+                            <br />
+<!--
                             <p>
                               {{buyerAddress.fullName}}<br />
                               {{buyerAddress.address1}} {{buyerAddress.address2}}<br />
                               {{buyerAddress.postal}} {{buyerAddress.city}}<br />
-                              <!--Tel: {{buyerAddress.phone}}<br /> -->
-                            </p>
+                              Tel: {{buyerAddress.phone}}<br />
+                              </p>
+-->
+
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -846,7 +850,7 @@ body.outlook p {
                         <tr>
                           <td class="panel">
                             <p class="lead">
-                              Deine Bestellnummer lautet: {{transactionId}}
+                              Deine Bestellnummer lautet: <b>{{transactionId}}</b>
                             </p>
                             <p class="lead">
                               Du hast folgende Mahlzeiten bestellt:
@@ -859,12 +863,12 @@ body.outlook p {
                               {{address.fullName}} (<a href="{{../homepage}}snaxter/profile/{{product.userId}}">{{../shop.name}}-Profil</a>)<br />
                               {{address.address1}} {{address.address2}}<br />
                               {{address.postal}} {{address.city}}<br />
-                              Tel: {{address.phone}}<br /> <br />
-                              *****<br /> <br />
-
+                              Tel: {{address.phone}}<br />
+                              *****<br />
                             </p>
                             {{/each}}
                             <p>
+                            <br />
                             En Guete!<br />
                             Dein snaxter-team<br />
                             </p>

@@ -816,7 +816,7 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hallo {{address.fullName}}}</h1>
+                            <h1>Hallo {{user.username}}</h1>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -860,7 +860,7 @@ body.outlook p {
                               Tel: {{address.phone}}<br />
 -->
                               Verkaufsdatum: {{forSaleOnDate}}<br />
-                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}} <br />
+                              Abholzeit: {{product.pickupTimeFrom}} - {{product.pickupTimeTo}} <br /> </br>
                               *****<br />
                             </p>
                             {{/each}}
