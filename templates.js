@@ -38,3 +38,6 @@ ReactionEmailTemplate = function (template) {
   }
   return source;
 };
+
+/* TODO: When switching to Meteor 1.3+ remove this hack and use the 'import' statement where necessary */
+global.ReactionEmailTemplate = ReactionEmailTemplate;

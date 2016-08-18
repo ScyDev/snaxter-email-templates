@@ -1,3 +1,5 @@
+ReactionRegistry.Packages[reaction-email-templates] = null;
+
 ReactionCore.registerPackage({
   label: "Email Templates",
   name: "reaction-email-templates",
